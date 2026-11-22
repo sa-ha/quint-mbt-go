@@ -1,0 +1,13 @@
+#!/bin/sh
+# quint-connect が起動する `quint run ... --out-itf <dir>/run_{seq}.itf.json` の代役。
+# トレースは生成せず、DIFFTEST_TRACE が指すファイルを 1 本だけ出力先に写す。
+set -eu
+out=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --out-itf) out="$2"; shift 2 ;;
+    *) shift ;;
+  esac
+done
+[ -n "$out" ] || { echo "quint shim: --out-itf is missing" >&2; exit 2; }
+cp "$DIFFTEST_TRACE" "$(printf '%s' "$out" | sed 's/{seq}/0/')"

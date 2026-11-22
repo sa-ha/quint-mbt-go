@@ -231,11 +231,11 @@ func (v Value) Field(name string) (Value, error) {
 // AsVariant decodes v as a sum-type variant. ok is false when v is not a
 // record with exactly a string "tag" field and a "value" field.
 func (v Value) AsVariant() (tag string, payload Value, ok bool) {
-	if v.kind != KindRecord || len(v.fields) != 2 || v.fields[0] != "tag" || v.fields[1] != "value" {
+	if v.kind != KindRecord || len(v.fields) != 2 || v.fields[0] != "tag" || v.fields[1] != "value" ||
+		v.elems[0].kind != KindStr {
 		return "", Value{}, false
 	}
-	tag, err := v.elems[0].AsString()
-	return tag, v.elems[1], err == nil
+	return v.elems[0].s, v.elems[1], true
 }
 
 // Option decodes v as Quint's Option type. ok is false when v is not an
