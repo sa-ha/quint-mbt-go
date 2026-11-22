@@ -107,3 +107,10 @@ FAIL testdata/traces/t10.itf.json: state mismatch at step 6, action process [cli
 ## Tested with
 
 Quint 0.33.1 (Rust evaluator v0.7.1), Go 1.27.3.
+
+## License
+
+Apache License 2.0; see [LICENSE](LICENSE). `examples/tictactoe` contains a
+specification copied from quint-connect and Go ports of its example code,
+also under Apache License 2.0 (copyright Informal Systems Inc.); see
+[NOTICE](examples/tictactoe/NOTICE).

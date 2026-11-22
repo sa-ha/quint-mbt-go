@@ -2,6 +2,7 @@
   "name": "quint-mbt-go",
   "private": true,
   "description": "Pins the Quint CLI used to generate the ITF traces in this repository.",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@informalsystems/quint": "0.33.1"
   }
