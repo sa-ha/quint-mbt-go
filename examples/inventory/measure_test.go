@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 // reports replays every trace against the faithful service and each mutant and

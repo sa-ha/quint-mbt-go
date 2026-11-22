@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 // Each mutant wraps a faithful Service and replaces one method with a copy

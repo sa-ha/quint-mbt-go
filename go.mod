@@ -1,4 +1,4 @@
-module quintmbt
+module github.com/sa-ha/quint-mbt-go
 
 go 1.27
 

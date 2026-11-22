@@ -3,8 +3,8 @@ package inventory
 import (
 	"errors"
 
-	"quintmbt/itf"
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/itf"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 // API is the surface the adapter drives. *Service implements it; the mutants

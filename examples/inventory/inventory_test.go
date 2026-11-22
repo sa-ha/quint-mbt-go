@@ -3,7 +3,7 @@ package inventory
 import (
 	"testing"
 
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 const traces = "testdata/traces/*.itf.json"

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"quintmbt/itf"
+	"github.com/sa-ha/quint-mbt-go/itf"
 )
 
 // The tests model a counter spec with `var n: int` and `var log: str`, whose

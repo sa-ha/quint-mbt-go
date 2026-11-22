@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 // verdict is the part of a result the differential test compares with

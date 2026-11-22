@@ -1,8 +1,8 @@
 package tictactoe
 
 import (
-	"quintmbt/itf"
-	"quintmbt/mbt"
+	"github.com/sa-ha/quint-mbt-go/itf"
+	"github.com/sa-ha/quint-mbt-go/mbt"
 )
 
 // Adapter mirrors TicTacToeDriver and GameState in quint-connect's

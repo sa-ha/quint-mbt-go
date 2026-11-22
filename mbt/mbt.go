@@ -14,7 +14,7 @@ import (
 	"sort"
 	"strings"
 
-	"quintmbt/itf"
+	"github.com/sa-ha/quint-mbt-go/itf"
 )
 
 const (

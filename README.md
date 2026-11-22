@@ -1,4 +1,4 @@
-# quintmbt (draft)
+# quint-mbt-go
 
 A small, dependency-free Go driver for model-based testing with
 [Quint](https://github.com/informalsystems/quint). It replays the ITF traces
@@ -11,8 +11,11 @@ It follows the design of the official Rust driver,
 checked against it: on 180 traces (100 generated, 80 deliberately tampered)
 both drivers reach the same verdict and fail at the same step.
 
-> Status: draft. Not affiliated with Informal Systems. The module path
-> `quintmbt` is a placeholder.
+> Status: early. Not affiliated with Informal Systems.
+
+```sh
+go get github.com/sa-ha/quint-mbt-go
+```
 
 ## How it works
 
