@@ -1,0 +1,4 @@
+spec/tictactoe.qnt is copied unchanged from quint-connect v0.1.2
+(https://github.com/informalsystems/quint-connect, connect/examples/tictactoe/spec/tictactoe.qnt).
+game.go and adapter.go are Go ports of game.rs and mbt.rs from the same directory.
+Copyright Informal Systems Inc. Licensed under the Apache License, Version 2.0.

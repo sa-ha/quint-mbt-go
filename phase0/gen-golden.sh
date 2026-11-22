@@ -19,4 +19,4 @@ q "$SPEC/probe2.qnt" --main=probe3 --mbt --backend=rust --seed=0x3 --max-samples
 q "$SPEC/probe2.qnt" --main=probe3       --backend=rust --seed=0x3 --max-samples=10 --n-traces=1 --max-steps=3 --out-itf="$OUT/probe3_nombt_rust_{seq}.itf.json"
 q "$SPEC/probe4.qnt"      --mbt --backend=rust       --seed=0x4 --max-samples=10 --n-traces=1 --max-steps=6 --out-itf="$OUT/probe4_rust_{seq}.itf.json"
 q "$SPEC/probe4.qnt"      --mbt --backend=typescript --seed=0x4 --max-samples=10 --n-traces=1 --max-steps=6 --out-itf="$OUT/probe4_ts_{seq}.itf.json"
-q "$SPEC/tictactoe.qnt"   --mbt --backend=rust       --seed=0x2a --max-samples=3 --n-traces=3 --out-itf="$OUT/tictactoe_rust_{seq}.itf.json"
+q "examples/tictactoe/spec/tictactoe.qnt"   --mbt --backend=rust       --seed=0x2a --max-samples=3 --n-traces=3 --out-itf="$OUT/tictactoe_rust_{seq}.itf.json"
