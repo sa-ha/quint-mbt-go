@@ -69,6 +69,29 @@ func TestReplayPasses(t *testing.T) {
 	if strings.Join(r.Unchecked, ",") != "log" {
 		t.Errorf("unchecked = %v, want [log]", r.Unchecked)
 	}
+	if want := "PASS t (3 steps); unchecked variables: log"; r.String() != want {
+		t.Errorf("report = %q, want %q", r.String(), want)
+	}
+}
+
+type recorder struct {
+	testing.TB
+	logs []string
+}
+
+func (r *recorder) Logf(format string, args ...any) {
+	r.logs = append(r.logs, fmt.Sprintf(format, args...))
+}
+
+func TestRunLogsUncheckedVariablesOfPassingTraces(t *testing.T) {
+	dir := t.TempDir()
+	writeTrace(t, dir, "a.itf.json", state("init", 0, noPicks), state("add", 1, pick(1)))
+	writeTrace(t, dir, "b.itf.json", state("init", 0, noPicks))
+	rec := &recorder{TB: t}
+	Run(rec, filepath.Join(dir, "*.itf.json"), func() Adapter { return newCounter() })
+	if got, want := strings.Join(rec.logs, "\n"), "mbt: 2 of 2 passing traces left variables unchecked: log"; got != want {
+		t.Errorf("logs = %q, want %q", got, want)
+	}
 }
 
 func TestReplayFailureKinds(t *testing.T) {

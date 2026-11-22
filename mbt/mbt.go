@@ -141,7 +141,11 @@ func (r Result) Passed() bool { return r.Failure == nil }
 // String renders the verdict; it is deterministic for a given trace and adapter.
 func (r Result) String() string {
 	if r.Failure == nil {
-		return fmt.Sprintf("PASS %s (%d steps)", r.Trace, r.Steps)
+		s := fmt.Sprintf("PASS %s (%d steps)", r.Trace, r.Steps)
+		if len(r.Unchecked) > 0 {
+			s += "; unchecked variables: " + strings.Join(r.Unchecked, ", ")
+		}
+		return s
 	}
 	f := r.Failure
 	var sb strings.Builder
